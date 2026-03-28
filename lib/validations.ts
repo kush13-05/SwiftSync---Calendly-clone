@@ -8,7 +8,7 @@ export const eventTypeSchema = z.object({
   description: z.string().optional(),
   duration: z.number().int().min(15).max(480),
   color: z.string().regex(/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/, "Valid hex color required"),
-  isActive: z.boolean().default(true),
+  isActive: z.boolean(),
 });
 
 export type EventTypeInput = z.infer<typeof eventTypeSchema>;

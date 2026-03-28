@@ -15,7 +15,7 @@ export async function getAvailability(req: Request, res: Response) {
 export async function updateAvailability(req: Request, res: Response) {
   try {
     const user = await getDemoUser();
-    const updatedRecords = await availabilityService.updateBulk(user.id, req.body.availability);
+    const updatedRecords = await availabilityService.bulkUpdate(user.id, req.body.availability);
     res.json({ success: true, data: updatedRecords });
   } catch (error: any) {
     res.status(500).json({ success: false, error: error.message });
