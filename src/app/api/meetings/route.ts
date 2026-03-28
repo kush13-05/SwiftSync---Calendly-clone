@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import * as meetingService from "../../../../server/services/meetingService";
 import { getDemoUser } from "../../../../server/services/authService";
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const user = await getDemoUser();

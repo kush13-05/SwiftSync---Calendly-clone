@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import * as availabilityService from "../../../../server/services/availabilityService";
 import { getDemoUser } from "../../../../server/services/authService";
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const user = await getDemoUser();

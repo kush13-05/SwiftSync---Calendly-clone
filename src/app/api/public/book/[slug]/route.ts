@@ -3,6 +3,8 @@ import { bookingSchema } from "../../../../../lib/validations";
 import prisma from "../../../../../lib/prisma";
 import * as meetingService from "../../../../../../server/services/meetingService";
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(request: NextRequest, { params }: { params: { slug: string } }) {
   try {
     const body = await request.json();

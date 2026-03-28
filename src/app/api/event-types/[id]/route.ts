@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import * as eventTypeService from "../../../../../server/services/eventTypeService";
 import { getDemoUser } from "../../../../../server/services/authService";
 
+export const dynamic = 'force-dynamic';
+
 export async function PUT(request: NextRequest, { params }: { params: { id: string } }) {
   try {
     const user = await getDemoUser();
