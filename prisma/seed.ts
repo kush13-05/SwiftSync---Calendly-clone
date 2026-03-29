@@ -38,9 +38,9 @@ async function main() {
   }
   console.log('Created 3 standard event types')
 
-  // 4. Populate Mon-Fri 9-5 availability rules
+  // 4. Populate Mon-Sun 9-5 availability rules
   const availability = []
-  for (let day = 1; day <= 5; day++) {
+  for (let day = 0; day <= 6; day++) {
     availability.push({
       userId: user.id,
       dayOfWeek: day,
@@ -50,7 +50,7 @@ async function main() {
     })
   }
   await prisma.availability.createMany({ data: availability })
-  console.log('Synchronized Mon-Fri availability rules')
+  console.log('Synchronized Mon-Sun availability rules')
 
   // 5. Populate demo meetings for the dashboard
   const events = await prisma.eventType.findMany()

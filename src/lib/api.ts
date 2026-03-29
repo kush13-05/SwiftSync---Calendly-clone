@@ -8,7 +8,7 @@ import {
 } from "../types";
 import { EventTypeInput, AvailabilityInput, BookingInput } from "./validations";
 
-const API_BASE = "http://localhost:3001/api";
+const API_BASE = "/api";
 
 async function fetcher<T>(url: string, options?: RequestInit): Promise<T> {
   const res = await fetch(url, {
