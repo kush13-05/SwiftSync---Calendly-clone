@@ -17,7 +17,7 @@ interface CreateEventModalProps {
   initialData?: EventTypeInput & { id: string };
 }
 
-const DURATION_OPTIONS = [15, 30, 45, 60];
+const DURATION_OPTIONS = [15, 30, 45, 60, 90, 120];
 const COLOR_OPTIONS = ["#006BFF", "#10B981", "#F59E0B", "#EF4444", "#8B5CF6", "#EC4899"];
 
 export function CreateEventModal({ isOpen, onClose, onSubmit, isLoading, initialData }: CreateEventModalProps) {
